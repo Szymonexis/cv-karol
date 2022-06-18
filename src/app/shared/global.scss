@@ -1,0 +1,77 @@
+$main-color: #08467f;
+$secondary-color: rgba($main-color, 0.3);
+
+$side-panel-width: 7cm;
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: $main-color;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background: $secondary-color;
+}
+
+h2, h3, ul {
+  margin: 0;
+}
+
+ul {
+  padding-left: 1rem;
+  li::marker {
+    color: $main-color;
+  }
+}
+
+.page {
+  width: 21cm;
+  height: 29.7cm;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.side-panel {
+  width: $side-panel-width;
+  height: 100%;
+  padding-right: 0.5rem;
+  .card {
+    height: calc(100% - 2rem);
+  }
+}
+
+.panel {
+  width: calc(21cm - $side-panel-width - 0.5rem);
+  padding-bottom: 0.5rem;
+}
+
+.clause {
+  font-size: xx-small;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  mat-icon {
+    color: $main-color;
+    margin: 0.2em;
+  }
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  align-self: center;
+  border-radius: 0.5em;
+  background-color: $main-color;
+  color: white;
+  padding: 0.5em;
+  margin-left: 0.5em;
+}
+
+.info {
+  display: flex;
+  align-content: center;
+  padding-bottom: 0.5em;
+}

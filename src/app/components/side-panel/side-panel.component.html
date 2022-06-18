@@ -1,0 +1,48 @@
+<div class="side-panel">
+  <mat-card class="card">
+    <img mat-card-image src="../../../assets/profile.jpg" alt="profile" />
+    <div class="box" style="padding-bottom: 1rem">
+      <mat-icon> person </mat-icon>
+      <h2>{{ info.firstName }} {{ info.secondName }}</h2>
+    </div>
+    <div class="details">
+      <div class="box">
+        <mat-icon> mail </mat-icon>
+        {{ info.email }}
+      </div>
+      <div class="box">
+        <mat-icon> phone </mat-icon>
+        {{ info.phoneNumber }}
+      </div>
+      <div class="box">
+        <mat-icon> home </mat-icon>
+        {{ info.address }}
+      </div>
+    </div>
+    <div class="hard-skills">
+      <div class="box">
+        <mat-icon> code </mat-icon>
+        <h2>Umiejętności twarde</h2>
+      </div>
+      <div *ngFor="let skill of hardSkills" class="hard-skill">
+        {{ skill.label }}
+        <mat-progress-bar
+          mode="determinate"
+          [value]="skill.value"
+          class="progress_bar"
+        ></mat-progress-bar>
+      </div>
+    </div>
+    <div class="soft-skills">
+      <div class="box">
+        <mat-icon> people </mat-icon>
+        <h2>Umiejętności miękkie</h2>
+      </div>
+      <ul *ngFor="let skill of softSkills">
+        <li>
+          {{ skill }}
+        </li>
+      </ul>
+    </div>
+  </mat-card>
+</div>

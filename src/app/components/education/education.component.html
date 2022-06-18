@@ -1,0 +1,30 @@
+<div class="panel">
+  <mat-card>
+    <div class="box">
+      <mat-icon> school </mat-icon>
+      <h2>Edukacja</h2>
+    </div>
+    <div class="education-item" *ngFor="let education of educationList">
+      <mat-card>
+        <p>
+          <b> {{ education.name }} </b>
+        </p>
+        <div class="info">
+          <div class="dates">
+            <label class="date">
+              od: {{ convertDate(education.startDate) }}
+            </label>
+            <label class="date">
+              do: {{ convertDate(education.endDate) }}
+            </label>
+          </div>
+          <div class="box">
+            <mat-icon> pin_drop </mat-icon>
+            {{ education.address }}
+          </div>
+        </div>
+        {{ education.description }}
+      </mat-card>
+    </div>
+  </mat-card>
+</div>

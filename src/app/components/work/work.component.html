@@ -1,0 +1,26 @@
+<div class="panel">
+  <mat-card>
+    <div class="box">
+      <mat-icon> work </mat-icon>
+      <h2>Doświadczenie zawodowe</h2>
+    </div>
+    <div class="work-item" *ngFor="let work of workList">
+      <mat-card>
+        <p>
+          <b> {{ work.name }} </b>
+        </p>
+        <div class="info">
+          <div class="dates">
+            <label class="date"> od: {{ convertDate(work.startDate) }} </label>
+            <label class="date"> do: {{ convertDate(work.endDate) }} </label>
+          </div>
+          <div class="box">
+            <mat-icon> pin_drop </mat-icon>
+            {{ work.address }}
+          </div>
+        </div>
+        {{ work.description }}
+      </mat-card>
+    </div>
+  </mat-card>
+</div>
